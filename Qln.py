@@ -8,7 +8,7 @@ dados = dados.drop('Cl',axis = 1)
 dados = np.array(dados)
 # Split the data into training and testing sets
 train_dados, test_dados, train_labels, test_labels = train_test_split(dados, labels, test_size = 0.30, random_state = 42)
-#Instantiate model with 1000 decision trees
+#Instantiate model with 800 decision trees
 rf = RandomForestRegressor(n_estimators = 800, random_state = 42)
 rf.fit(train_dados, train_labels)
 # Use the forest's predict method on the test data
